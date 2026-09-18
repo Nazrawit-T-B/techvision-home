@@ -9,11 +9,10 @@ export function PricingPlans({ showHeader = true }: { showHeader?: boolean }) {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <section id="pricing" className="relative py-24 lg:py-32">
+    <section id="pricing" className="relative py-16 lg:py-20">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
         {showHeader && (
-          <div className="max-w-2xl">
-            <span className="font-mono text-xs tracking-widest text-primary uppercase">Pricing</span>
+          <div className="mx-auto max-w-3xl text-center">
             <h2 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl tracking-tight text-balance">
               Simple, transparent pricing
             </h2>
