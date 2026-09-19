@@ -19,10 +19,11 @@ export function SolutionsGrid() {
           </p>
         </div>
 
-        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 border-l border-border">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
+            <div key={product.slug} className="relative">
+              <div className="absolute -left-2 top-3 h-full w-full border border-primary" />
             <Link
-              key={product.slug}
               href={`/solutions#${product.slug}`}
               className="group relative overflow-hidden  border border-border"
             >
@@ -45,6 +46,7 @@ export function SolutionsGrid() {
                 </p>
               </div>
             </Link>
+          </div>
           ))}
         </div>
       </div>
