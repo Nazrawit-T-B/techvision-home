@@ -160,7 +160,7 @@ export const pricingPlans = [
       "Custom branding",
     ],
     cta: "Start free trial",
-    popular: false,
+    popular: true,
   },
   {
     name: "Education Suite",
@@ -176,7 +176,7 @@ export const pricingPlans = [
       "Local Ethiopian support",
     ],
     cta: "Talk to sales",
-    popular: false,
+    popular: true,
   },
   {
     name: "Enterprise Suite",
