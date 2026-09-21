@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { SiteNav } from "@/components/site/site-nav";
 import { SiteFooter } from "@/components/site/site-footer";
-import { PageHeader } from "@/components/site/page-header";
+import { SolutionsHero } from "@/components/solutions/solutions-hero";
 import { ProductSections } from "@/components/solutions/product-sections";
 import { BundlesSection } from "@/components/site/bundles-section";
-import { CtaBanner } from "@/components/site/cta-banner";
-
+import { SolutionsCta } from "@/components/solutions/solutions-cta";
 export const metadata: Metadata = {
   title: "Solutions — TechVision",
   description:
@@ -14,16 +13,12 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#FCF8FA]">
       <SiteNav />
-      <PageHeader
-        eyebrow="Solutions"
-        title="Powerful products for learning, operations, and people"
-        description="Each TechVision product is a complete, cloud-based system on its own — and even more powerful together. Buy what you need, scale when you're ready."
-      />
+      <SolutionsHero />
       <ProductSections />
       <BundlesSection />
-      <CtaBanner />
+      <SolutionsCta />
       <SiteFooter />
     </main>
   );
