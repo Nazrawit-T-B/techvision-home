@@ -25,7 +25,7 @@ export function SolutionsGrid() {
               <div className="absolute -left-2 top-3 h-full w-full border border-primary" />
             <Link
               href={`/solutions#${product.slug}`}
-              className="group relative overflow-hidden  border border-border"
+              className="group relative overflow-hidden  border border-border transition-transform duration-300 ease-out hover:scale-[1.03] hover:z-20"
             >
               <div className="p-7">
                 <div className="flex items-start justify-between gap-4">
