@@ -142,6 +142,7 @@ export const pricingPlans = [
       "Cloud hosting",
       "Email support",
       "Mobile access",
+      "Limited support"
     ],
     cta: "Start free trial",
     popular: false,

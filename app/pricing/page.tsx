@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/site/page-header";
 import { PricingPlans } from "@/components/site/pricing-plans";
 import { BundlesSection } from "@/components/site/bundles-section";
 import { PricingFaq } from "@/components/pricing/pricing-faq";
-import { CtaBanner } from "@/components/site/cta-banner";
+import { SolutionsCta } from "@/components/solutions/solutions-cta";
 
 export const metadata: Metadata = {
   title: "Pricing — TechVision",
@@ -25,7 +25,8 @@ export default function PricingPage() {
       <PricingPlans showHeader={false} />
       <BundlesSection />
       <PricingFaq />
-      <CtaBanner />
+      
+      <SolutionsCta/>
       <SiteFooter />
     </main>
   );

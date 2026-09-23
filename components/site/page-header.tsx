@@ -8,25 +8,13 @@ export function PageHeader({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-green-glow pt-36 lg:pt-44 pb-16 lg:pb-20 border-b border-border">
-      <div className="absolute inset-0 pointer-events-none opacity-[0.4]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-            maskImage: "radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%)",
-          }}
-        />
-      </div>
-      <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12">
-        <span className="font-mono text-xs tracking-widest text-primary uppercase">{eyebrow}</span>
-        <h1 className="mt-4 max-w-3xl font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[0.98] tracking-tight text-balance">
+    <section className="relative overflow-hidden pt-14 pb-16 lg:pt-14 lg:pb-20">
+      <div className="relative z-10 mx-auto px-6 text-center">
+        <h1 className="mx-auto max-w-6xl font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-balance pt-15">
           {title}
         </h1>
         {description && (
-          <p className="mt-5 max-w-2xl text-lg lg:text-xl text-muted-foreground leading-relaxed text-pretty">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground text-balance">
             {description}
           </p>
         )}

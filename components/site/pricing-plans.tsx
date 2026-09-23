@@ -52,14 +52,14 @@ export function PricingPlans({ showHeader = true }: { showHeader?: boolean }) {
           {pricingPlans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative flex flex-col rounded-2xl border bg-card p-7 ${
+              className={`relative flex flex-col   bg-card p-7 border border-[#111827] bg-[#FCF8FA] shadow-[-8px_5px_0_-1px_#FCF8FA,-8px_5px_0_0_#111827] ${
                 plan.popular
-                  ? "border-primary shadow-xl shadow-primary/15 ring-1 ring-primary"
-                  : "border-border"
+                  ? "border-primary "
+                  : "border-[#111827]"
               }`}
             >
               {plan.popular && (
-                <span className="absolute -top-3 left-7 rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                <span className="absolute -top-3 left-7  bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
                   Most Popular
                 </span>
               )}
@@ -73,17 +73,7 @@ export function PricingPlans({ showHeader = true }: { showHeader?: boolean }) {
                 <span className="text-muted-foreground text-sm">/mo</span>
               </div>
 
-              <Link
-                href="/contact"
-                className={`mt-6 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-colors group ${
-                  plan.popular
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                    : "border border-border text-foreground hover:bg-accent"
-                }`}
-              >
-                {plan.cta}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+             
 
               <ul className="mt-7 space-y-3 border-t border-border pt-6">
                 {plan.features.map((feature) => (
@@ -93,6 +83,17 @@ export function PricingPlans({ showHeader = true }: { showHeader?: boolean }) {
                   </li>
                 ))}
               </ul>
+               <Link
+                href="/contact"
+                className={`mt-6 inline-flex items-center justify-center gap-2  px-5 py-3 text-sm font-medium transition-colors group ${
+                  plan.popular
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "border border-border text-foreground hover:bg-accent"
+                }`}
+              >
+                {plan.cta}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
           ))}
         </div>

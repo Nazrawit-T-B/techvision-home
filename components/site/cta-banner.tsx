@@ -12,14 +12,15 @@ export function CtaBanner() {
               Ready to transform your organization?
             </h2>
             <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-              Book a personalized demo and see how TechVision can streamline learning, operations,
-              and people management — all in one place.
+              Book a personalized demo and see how TechVision can streamline
+              learning, operations, and people management — all in one place.
             </p>
-            <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mt-9 flex flex-col sm:flex-row gap-4">
               <Button
                 asChild
+                variant="ghost"
                 size="lg"
-                className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 px-8 h-14 text-base shadow-lg shadow-primary/30 group"
+                className="inline-flex items-center justify-center gap-2 rounded-[3px] bg-[#111827] px-8 py-3 font-mono text-[14px] text-white shadow-[-5px_5px_0_0_#2DB266]"
               >
                 <Link href="/contact">
                   Request Demo
@@ -29,8 +30,7 @@ export function CtaBanner() {
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="rounded-full h-14 px-8 text-base border-border bg-background/60 hover:bg-background"
+                className="inline-flex items-center justify-center rounded-[3px] border border-[#111827] bg-[#FBF8F8] px-8 py-3 font-mono text-[14px] text-[#111827] shadow-[-5px_5px_0_0_#FCF8FA,-5px_5px_0_1px_#111827]"
               >
                 <Link href="/pricing">View Pricing</Link>
               </Button>

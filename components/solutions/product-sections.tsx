@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CircleCheck, ArrowRight } from "lucide-react";
 import { solutionsProducts } from "./solutions-content";
+import { Button } from "../ui/button";
 export function ProductSections() {
   return (
     <div className="mx-auto flex max-w-[1264px] flex-col gap-36 px-6 py-24">
@@ -11,7 +12,7 @@ export function ProductSections() {
           <section
             key={product.slug}
             id={product.slug}
-            className="scroll-mt-24 border border-[#111827] bg-[#FCF8FA] shadow-[-8px_5px_0_-1px_#FCF8FA,-8px_5px_0_0_#111827]"
+            className="scroll-mt-24 border border-[#111827] bg-[#FFFFFF] shadow-[-8px_5px_0_-1px_#FCF8FA,-8px_5px_0_0_#111827]"
           >
             <div className="py-16">
               <div className="grid grid-cols-1 gap-8 px-6 lg:grid-cols-12 lg:items-start lg:px-0">
@@ -77,16 +78,20 @@ export function ProductSections() {
                     </ul>
                   )}
 
-                  <p className="mt-6 font-mono text-xs text-[#111827]">
+                  <p className="mt-6 font-mono text-xs mb-5 text-[#111827]">
                     From ${product.startingPrice}/mo{" "}
                   </p>
-                  <Link
-                    href="/contact"
-                    className="mt-6 flex w-fit items-center gap-2 rounded-[2px] bg-[#111827] px-8 py-[13px] font-mono text-sm leading-5 text-white shadow-[-5px_5px_0_0_#2DB266]"
+                  <Button
+                    asChild
+                    variant="ghost"
+                    size="lg"
+                    className="inline-flex items-center justify-center gap-2 rounded-[3px] bg-[#111827] px-8 py-3 font-mono text-[14px] text-white shadow-[-5px_5px_0_0_#2DB266]"
                   >
-                    Request Demo
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
+                    <Link href="/contact">
+                      Request Demo
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
 
                 <div

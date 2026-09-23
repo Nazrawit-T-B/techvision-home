@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#FCF8FA]">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#FFFFFF]">
       <SiteNav />
       <SolutionsHero />
       <ProductSections />

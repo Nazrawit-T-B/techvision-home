@@ -11,7 +11,6 @@ export function HomeHero() {
 
   return (
     <section className="relative bg-background border-b border-border">
-
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 pt-44 lg:pt-64 pb-28">
         <div
           className={`mx-auto max-w-3xl text-center transition-all duration-700 ${
@@ -28,40 +27,44 @@ export function HomeHero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            LMS, Education ERP, ERP, and HR Management — one cloud platform to run your school,
-            university, or business smarter. Built for scale, backed by local Ethiopian support.
+            LMS, Education ERP, ERP, and HR Management — one cloud platform to
+            run your school, university, or business smarter. Built for scale,
+            backed by local Ethiopian support.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               asChild
+              variant="ghost"
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 h-14 text-base shadow-lg shadow-primary/30 group"
+              className="inline-flex items-center justify-center gap-2 rounded-[3px] bg-[#111827] px-8 py-3 font-mono text-[14px] text-white shadow-[-5px_5px_0_0_#2DB266]"
             >
               <Link href="/contact">
-                Request Demo
+                REQUEST DEMO
                 <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className=" h-14 px-8 text-base border-border hover:bg-accent"
+              className="inline-flex items-center justify-center rounded-[3px] border border-[#111827] bg-[#FBF8F8] px-8 py-3 font-mono text-[14px] text-[#111827] shadow-[-5px_5px_0_0_#FCF8FA,-5px_5px_0_1px_#111827]"
             >
               <Link href="/solutions">VIEW SERVICES</Link>
             </Button>
           </div>
 
           <div className="mt-10 w-full border-t border-border pt-5 grid grid-cols-1 sm:grid-cols-3 font-mono text-xs text-muted-foreground">
-            {["No credit card required", "14-day free trial", "Local support"].map((item) => (
+            {[
+              "No credit card required",
+              "14-day free trial",
+              "Local support",
+            ].map((item) => (
               <span key={item} className="text-center">
                 {item}
               </span>
             ))}
           </div>
         </div>
-        
       </div>
     </section>
   );

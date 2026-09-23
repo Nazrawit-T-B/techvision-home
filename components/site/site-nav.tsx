@@ -66,13 +66,13 @@ export function SiteNav() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <Button asChild variant="ghost" size="sm" className="rounded-full text-foreground/80 hover:text-foreground">
+            <Button asChild variant="ghost" size="sm" className="inline-flex items-center justify-center gap-2 rounded-[3px] bg-[#111827] px-8 py-3 font-mono text-[14px] text-white shadow-[-5px_5px_0_0_#2DB266]">
               <Link href="/contact">Sign in</Link>
             </Button>
             <Button
               asChild
               size="sm"
-              className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 px-5 shadow-sm shadow-primary/30"
+              className="inline-flex items-center justify-center rounded-[3px] border border-[#111827] bg-[#FBF8F8] px-8 py-3 font-mono text-[14px] text-[#111827] shadow-[-5px_5px_0_0_#FCF8FA,-5px_5px_0_1px_#111827]"
             >
               <Link href="/contact">Request Demo</Link>
             </Button>
