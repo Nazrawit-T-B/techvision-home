@@ -22,12 +22,12 @@ export function IndustriesStrip() {
               {/* Offset layer behind the card */}
               <div
                 className={`absolute -left-1 top-1 h-full w-full border-l-4 border-b-4 ${
-                  index < 4 ? "border-[#002333]" : "border-[#00D38D]"
+                  index < 4 ? "border border-border" : "border-[#00D38D]"
                 }`}
               />
 
               {/* Actual card */}
-              <div className="relative z-10 h-full border border-[#002333] bg-background p-6 text-center transition-colors hover:bg-accent/40">
+              <div className="relative z-10 h-full border border-border bg-background p-6 text-center transition-all duration-300 ease-out hover:scale-[1.03] hover:z-20 hover:bg-accent/40">
                 <h3 className="font-display text-xl tracking-tight">
                   {industry.name}
                 </h3>
@@ -40,12 +40,12 @@ export function IndustriesStrip() {
 
           <div className="relative">
             {/* Offset layer behind the card */}
-            <div className="absolute -left-1 top-1 h-full w-full border-l-4 border-b-4 border-[#002333]" />
+            <div className="absolute -left-1 top-1 h-full w-full border-l-4 border-b-4 border border-border" />
 
             {/* Actual card */}
             <Link
               href="/contact"
-              className="relative z-10 flex h-full min-h-[150px] items-center justify-center border border-[#002333] bg-background p-6 transition-colors hover:bg-accent/40"
+              className="relative z-10 flex h-full min-h-[150px] items-center justify-center border border border-border bg-background p-6 transition-colors hover:bg-accent/40"
               aria-label="Contact us about your industry"
             >
               <span className="font-display text-2xl uppercase tracking-tight">
