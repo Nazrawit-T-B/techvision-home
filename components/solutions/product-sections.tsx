@@ -12,7 +12,7 @@ export function ProductSections() {
           <section
             key={product.slug}
             id={product.slug}
-            className="scroll-mt-24 border border-[#111827] bg-[#FFFFFF] shadow-[-8px_5px_0_-1px_#FCF8FA,-8px_5px_0_0_#111827]"
+            className="scroll-mt-24 border border-foreground bg-card shadow-[-8px_5px_0_-1px_#FCF8FA,-8px_5px_0_0_#111827]"
           >
             <div className="py-16">
               <div className="grid grid-cols-1 gap-8 px-6 lg:grid-cols-12 lg:items-start lg:px-0">
@@ -22,21 +22,21 @@ export function ProductSections() {
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#6B7280] bg-white">
-                      <product.icon className="h-5 w-5 text-[#111827]" />
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center border border-border bg-background">
+                      <product.icon className="h-5 w-5 text-foreground" />
                     </span>
 
-                    <h2 className="font-display align-middle text-[30px] font-medium leading-[38px] tracking-[0px] text-[#111827]">
+                    <h2 className="font-display align-middle text-[30px] font-medium leading-[38px] tracking-[0px] text-foreground">
                       {product.name}
                     </h2>
                   </div>
                   <p
-                    className={`mt-6 leading-6 text-[#45464C] ${
+                    className={`mt-6 leading-6 text-muted-foreground ${
                       product.lead ? "text-base" : "text-sm"
                     }`}
                   >
                     {product.lead && (
-                      <strong className="block text-xl font-black leading-6 text-[#45464C]">
+                      <strong className="block text-xl font-black leading-6 text-muted-foreground">
                         {product.lead}
                       </strong>
                     )}
@@ -48,17 +48,17 @@ export function ProductSections() {
                       {product.cards.map((card) => (
                         <div
                           key={card.title}
-                          className={`flex flex-col gap-1 rounded-[2px] border bg-[#FCF8FA] p-4 ${
+                          className={`flex flex-col gap-1 rounded-[2px] border bg-background p-4 ${
                             product.cardStyle === "plain"
-                              ? "border-[#DCD9DB]"
-                              : "border-[#111827] shadow-[-5px_5px_0_-1px_#FCF8FA,-5px_5px_0_0_#111827]"
+                              ? "border-border"
+                              : "border-foreground shadow-[-5px_5px_0_-1px_#FCF8FA,-5px_5px_0_0_#111827]"
                           }`}
                         >
                           <card.icon className="h-[19px] w-[18px] text-[#006E2F]" />
                           <h3 className="font-mono text-sm font-medium text-[#111827]">
                             {card.title}
                           </h3>
-                          <p className="text-xs leading-5 text-[#45464C]">
+                          <p className="text-xs leading-5 text-foreground">
                             {card.description}
                           </p>
                         </div>
@@ -99,8 +99,8 @@ export function ProductSections() {
                     reversed ? "lg:col-start-2" : "lg:col-start-7"
                   }`}
                 >
-                  <div className="h-80 rounded-[4px] border border-[#DCD9DB] bg-[#FCF8FA] p-4">
-                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[2px] border border-[#DCD9DB]/50 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]">
+                  <div className="h-80 rounded-[4px] border border-border bg-background p-4">
+                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[2px] border border-border/50 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]">
                       <Image
                         src={product.image}
                         alt={`${product.name} dashboard`}

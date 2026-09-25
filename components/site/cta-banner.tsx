@@ -20,7 +20,7 @@ export function CtaBanner() {
                 asChild
                 variant="ghost"
                 size="lg"
-                className="inline-flex items-center justify-center gap-2 rounded-[3px] bg-[#111827] px-8 py-3 font-mono text-[14px] text-white shadow-[-5px_5px_0_0_#2DB266]"
+                className="inline-flex items-center justify-center gap-2 rounded-[3px] bg-foreground px-8 py-3 font-mono text-[14px] text-background shadow-[-5px_5px_0_0_#2DB266]"
               >
                 <Link href="/contact">
                   Request Demo
@@ -30,7 +30,7 @@ export function CtaBanner() {
               <Button
                 asChild
                 size="lg"
-                className="inline-flex items-center justify-center rounded-[3px] border border-[#111827] bg-[#FBF8F8] px-8 py-3 font-mono text-[14px] text-[#111827] shadow-[-5px_5px_0_0_#FCF8FA,-5px_5px_0_1px_#111827]"
+                className="inline-flex items-center justify-center rounded-[3px] border border-foreground bg-background px-8 py-3 font-mono text-[14px] text-foreground shadow-[-5px_5px_0_0_#FCF8FA,-5px_5px_0_1px_#111827]"
               >
                 <Link href="/pricing">View Pricing</Link>
               </Button>
