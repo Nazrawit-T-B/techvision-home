@@ -3,16 +3,18 @@ import Link from "next/link";
 import { CircleCheck, ArrowRight } from "lucide-react";
 import { solutionsProducts } from "./solutions-content";
 import { Button } from "../ui/button";
+
 export function ProductSections() {
   return (
-    <div className="mx-auto flex max-w-[1264px] flex-col gap-36 px-6 py-24">
+    <div className="mx-auto flex max-w-[1264px] flex-col gap-36 px-6 pt-24 pb-8">
       {solutionsProducts.map((product, idx) => {
         const reversed = idx % 2 === 1;
+
         return (
           <section
             key={product.slug}
             id={product.slug}
-            className="scroll-mt-24 border border-foreground bg-card shadow-[-8px_5px_0_-1px_#FCF8FA,-8px_5px_0_0_#111827]"
+            className="scroll-mt-24 border-b border-border bg-background last:border-b-0"
           >
             <div className="py-16">
               <div className="grid grid-cols-1 gap-8 px-6 lg:grid-cols-12 lg:items-start lg:px-0">
@@ -30,6 +32,7 @@ export function ProductSections() {
                       {product.name}
                     </h2>
                   </div>
+
                   <p
                     className={`mt-6 leading-6 text-muted-foreground ${
                       product.lead ? "text-base" : "text-sm"
@@ -55,9 +58,11 @@ export function ProductSections() {
                           }`}
                         >
                           <card.icon className="h-[19px] w-[18px] text-primary" />
+
                           <h3 className="font-mono text-sm font-medium text-foreground">
                             {card.title}
                           </h3>
+
                           <p className="text-xs leading-5 text-foreground">
                             {card.description}
                           </p>
@@ -81,6 +86,7 @@ export function ProductSections() {
                   <p className="mt-6 mb-5 font-mono text-xs text-foreground">
                     From ${product.startingPrice}/mo{" "}
                   </p>
+
                   <Button
                     asChild
                     variant="ghost"
