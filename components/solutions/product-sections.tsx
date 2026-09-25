@@ -54,8 +54,8 @@ export function ProductSections() {
                               : "border-foreground shadow-[-5px_5px_0_-1px_#FCF8FA,-5px_5px_0_0_#111827]"
                           }`}
                         >
-                          <card.icon className="h-[19px] w-[18px] text-[#006E2F]" />
-                          <h3 className="font-mono text-sm font-medium text-[#111827]">
+                          <card.icon className="h-[19px] w-[18px] text-primary" />
+                          <h3 className="font-mono text-sm font-medium text-foreground">
                             {card.title}
                           </h3>
                           <p className="text-xs leading-5 text-foreground">
@@ -69,16 +69,16 @@ export function ProductSections() {
                       {product.features?.map((feature) => (
                         <li
                           key={feature}
-                          className="flex items-center gap-3 text-sm leading-6 text-[#111827]"
+                          className="flex items-center gap-3 text-sm leading-6 text-foreground"
                         >
-                          <CircleCheck className="h-4 w-4 shrink-0 text-[#2DB266]" />
+                          <CircleCheck className="h-4 w-4 shrink-0 text-primary" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   )}
 
-                  <p className="mt-6 font-mono text-xs mb-5 text-[#111827]">
+                  <p className="mt-6 mb-5 font-mono text-xs text-foreground">
                     From ${product.startingPrice}/mo{" "}
                   </p>
                   <Button

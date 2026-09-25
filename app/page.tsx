@@ -4,7 +4,7 @@ import { HomeHero } from "@/components/home/home-hero";
 import { StatsBand } from "@/components/home/stats-band";
 import { SolutionsGrid } from "@/components/home/solutions-grid";
 import { IndustriesStrip } from "@/components/home/industries-strip";
-import { PricingPlans } from "@/components/site/pricing-plans";
+import { PricingPreview } from "@/components/home/pricing-preview";
 import { CtaBanner } from "@/components/site/cta-banner";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       <StatsBand />
       <SolutionsGrid />
       <IndustriesStrip />
-      <PricingPlans />
+      <PricingPreview />
       <CtaBanner />
       <SiteFooter />
     </main>

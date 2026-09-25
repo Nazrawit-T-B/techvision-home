@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Target, Eye, Heart } from "lucide-react";
 import { SiteNav } from "@/components/site/site-nav";
 import { SiteFooter } from "@/components/site/site-footer";
-import { PageHeader } from "@/components/site/page-header";
 import { CtaBanner } from "@/components/site/cta-banner";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About — TechVision",
@@ -43,13 +43,43 @@ export default function AboutPage() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
       <SiteNav />
-      <PageHeader
-        eyebrow="About"
-        title="Technology built for our communities"
-        description="TechVision is on a mission to help organizations across Ethiopia and beyond run smarter with secure, scalable, cloud-based software — backed by people who understand the local context."
-      />
+      <section className="relative px-6 pb-12 pt-36 lg:px-12 lg:pb-16 lg:pt-44">
+  <div className="mx-auto max-w-[1216px]">
+    <p className="text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
+      About
+    </p>
 
-      <section className="relative py-24 lg:py-32">
+    <div className="mt-7 grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      {/* Left side */}
+      <div>
+        <h1 className="font-display text-5xl font-semibold leading-[1.08] tracking-[-0.03em] text-foreground md:text-6xl">
+          Technology built for our communities
+        </h1>
+
+        <p className="mt-7 max-w-[620px] text-lg leading-8 text-muted-foreground">
+          TechVision is on a mission to help organizations across Ethiopia
+          and beyond run smarter with secure, scalable, cloud-based software
+          — backed by people who understand the local context.
+        </p>
+      </div>
+
+      <div className="flex justify-center lg:justify-end">
+        <div className="relative w-full max-w-[460px] overflow-hidden rounded-xl">
+          <Image
+            src="/about/about-hero.png"
+            alt="TechVision technology infrastructure"
+            width={1536}
+            height={1024}
+            priority
+            className="h-[280px] w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section className="relative pb-24 pt-8 lg:pb-32 lg:pt-10">
         <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
           <div className="grid gap-6 lg:grid-cols-3">
             {values.map((value) => {
@@ -81,7 +111,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative py-24 lg:py-32">
+      <section className="relative pb-24 pt-8 lg:pb-32 lg:pt-10">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
           <span className="font-mono text-xs tracking-widest text-primary uppercase">Our story</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl tracking-tight text-balance">

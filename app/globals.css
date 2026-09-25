@@ -303,3 +303,13 @@
     transform: translateX(200%);
   }
 }
+
+select option {
+  background-color: #ffffff;
+  color: #002333;
+}
+
+.dark select option {
+  background-color: #002333;
+  color: #ffffff;
+}

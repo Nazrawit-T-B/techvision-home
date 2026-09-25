@@ -1,54 +1,109 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { products } from "@/lib/site-data";
+import {
+  BookOpen,
+  GraduationCap,
+  Building2,
+  Users,
+  ArrowRight,
+} from "lucide-react";
+
+const homeSolutions = [
+  {
+    name: "Learning Management System",
+    short: "LMS",
+    icon: BookOpen,
+    href: "/solutions#lms",
+  },
+  {
+    name: "Education ERP",
+    short: "Education ERP",
+    icon: GraduationCap,
+    href: "/solutions#education-erp",
+  },
+  {
+    name: "ERP System",
+    short: "ERP",
+    icon: Building2,
+    href: "/solutions#erp",
+  },
+  {
+    name: "HR Management",
+    short: "HR",
+    icon: Users,
+    href: "/solutions#hr",
+  },
+];
 
 export function SolutionsGrid() {
   return (
-    <section id="solutions" className="relative py-24 lg:py-32">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
-        <div className="max-w-2xl">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground">
-              Solutions
-          </h2>
-          <p className="mt-5 font-mono text-xs uppercase tracking-[0.25em] text-foreground">
-             One platform, four powerful products
+    <section id="solutions" className="relative py-10 lg:py-12">
+      <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+
+        {/* Section heading */}
+        <div className="text-center">
+          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">
+            Solutions
           </p>
-          <p className="mt-8 max-w-4xl text-lg md:text-xl leading-relaxed text-muted-foreground">
-            Buy each product individually or bundle them into a suite. Everything is
-            cloud-based, secure, and built to work together.
+
+          <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+            Everything you need to work smarter
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            Four connected products built to simplify learning, operations,
+            finance, and workforce management.
           </p>
         </div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
-            <div key={product.slug} className="relative">
-              <div className="absolute -left-2 top-3 h-full w-full border border-primary" />
-            <Link
-              href={`/solutions#${product.slug}`}
-              className="group relative overflow-hidden  border border-border transition-transform duration-300 ease-out hover:scale-[1.03] hover:z-20"
-            >
-              <div className="p-7">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-foreground">
-                      {product.short}
+        {/* Solution preview cards */}
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {homeSolutions.map((solution) => {
+            const Icon = solution.icon;
+
+            return (
+              <Link
+                key={solution.name}
+                href={solution.href}
+                className="group relative"
+              >
+                {/* Offset layer */}
+                <div className="absolute -left-1 top-1 h-full w-full border border-primary bg-primary/10" />
+
+                {/* Main card */}
+                <div className="relative z-10 flex min-h-[180px] h-full flex-col border border-border bg-background p-6 transition-transform duration-300 group-hover:-translate-y-1">
+                  <div className="flex items-start justify-between">
+                    <span className="flex h-10 w-10 items-center justify-center bg-primary/10 text-primary">
+                      <Icon className="h-5 w-5" strokeWidth={1.8} />
                     </span>
-                    <h3 className="mt-3 font-display text-2xl tracking-tight">{product.name}</h3>
+
+                    <ArrowRight className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1" />
                   </div>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary">
-                    <ArrowUpRight className="h-4 w-4" />
-                  </span>
+
+                  <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-primary">
+                    {solution.short}
+                  </p>
+
+                  <h3 className="mt-2 font-display text-xl font-medium tracking-tight text-foreground">
+                    {solution.name}
+                  </h3>
                 </div>
-                <p className="mt-3 text-muted-foreground leading-relaxed">{product.tagline}</p>
-                <p className="mt-4 text-sm text-muted-foreground">
-                  From{" "}
-                  <span className="font-medium text-foreground">${product.startingPrice}</span>/mo
-                </p>
-              </div>
-            </Link>
-          </div>
-          ))}
+              </Link>
+            );
+          })}
         </div>
+
+        {/* Full Solutions page */}
+        <div className="mt-7 flex justify-center">
+          <Link
+            href="/solutions"
+            className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-primary"
+          >
+            Explore all solutions
+
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+          </Link>
+        </div>
+
       </div>
     </section>
   );

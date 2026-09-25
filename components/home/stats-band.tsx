@@ -67,8 +67,9 @@ function AnimatedNumber({
 }
 export function StatsBand() {
   return (
-    <section className="relative border-b border-border bg-background py-20 lg:py-24">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
+    <section className="relative bg-background pt-6 pb-10 lg:pt-8 lg:pb-12">
+      <div className="mx-auto mb-8 h-px w-64 bg-primary/50" />
+      <div className="max-w-[1320px] mx-auto px-10 lg:px-12">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">

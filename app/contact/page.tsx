@@ -69,7 +69,7 @@ export default function ContactPage() {
                   Area of Interest
                 </label>
                 <div className="relative">
-                  <select className="h-12 w-full appearance-none rounded-none border border-border bg-transparent px-3 text-base text-foreground outline-none">
+                  <select className="h-12 w-full appearance-none rounded-none border border-border bg-transparent px-3 text-base text-foreground outline-none bg-background text-foreground dark:[color-scheme:dark]">
                     <option>Network Solutions</option>
                     <option>Infrastructure</option>
                     <option>Security</option>
