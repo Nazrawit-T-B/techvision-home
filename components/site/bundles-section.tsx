@@ -15,7 +15,8 @@ export function BundlesSection() {
               Save more with bundled suites
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Combine products into a single suite and unlock deeper integration plus bundle pricing.
+              Combine products into a single suite and unlock deeper integration
+              plus bundle pricing.
             </p>
           </div>
         </div>
@@ -43,6 +44,7 @@ export function BundlesSection() {
                     <h3 className="font-display text-2xl tracking-tight">
                       {bundle.name}
                     </h3>
+
                     <span className="border border-[#002333] bg-[#00D38D]/15 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-foreground">
                       {bundle.save}
                     </span>
@@ -62,8 +64,8 @@ export function BundlesSection() {
                   </ul>
 
                   <Link
-                    href="/pricing"
-                    className="group mt-auto inline-flex items-center gap-2 pt-7 font-mono text-xs uppercase tracking-[0.2em] text-foreground transition-colors hover:text-[#002333]"
+                    href="#pricing"
+                    className="group mt-auto inline-flex items-center gap-2 pt-7 font-mono text-xs uppercase tracking-[0.2em] text-foreground transition-colors hover:text-primary"
                   >
                     View bundle pricing
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
