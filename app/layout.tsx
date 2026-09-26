@@ -20,6 +20,18 @@ export const metadata: Metadata = {
   description:
     "TechVision builds cloud-based LMS, Education ERP, ERP, and HR Management systems that help schools, universities, and businesses run smarter. Local Ethiopian support.",
   generator: "v0.app",
+  icons: {
+  icon: [
+    {
+      url: "/brand/techvision-light.svg",
+      media: "(prefers-color-scheme: light)",
+    },
+    {
+      url: "/brand/techvision-dark.svg",
+      media: "(prefers-color-scheme: dark)",
+    },
+  ],
+},
 };
 
 export default function RootLayout({
@@ -38,7 +50,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

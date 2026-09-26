@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/site-data";
 import { PageLoader } from "@/components/site/page-loader";
 import { ThemeToggle } from "@/components/site/theme-toggle";
+import Image from "next/image";
 
 export function SiteNav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,11 +43,25 @@ export function SiteNav() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background">
       <nav className="mx-auto  bg-background border border-border ">
         <div className="flex h-20 items-center justify-between px-5 lg:px-8">
-          <Link href="/" onClick={(e) => handleNavigation(e, "/")} className="flex items-center gap-2.5 group">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground font-display text-lg shadow-sm shadow-primary/30">
-              T
-            </span>
-            <span className="font-display text-xl tracking-tight">TechVision</span>
+          <Link
+          href="/"
+          onClick={(e) => handleNavigation(e, "/")}
+          className="flex items-center">
+             <Image
+             src="/brand/techvision-blue.jpg"
+             alt="Tech Vision"
+             width={180}
+             height={40}
+             priority
+             className="h-10 w-auto dark:hidden"/>
+             
+             <Image
+             src="/brand/techvision-green.svg"
+             alt="Tech Vision"
+             width={180}
+             height={40}
+             priority
+             className="hidden h-10 w-auto dark:block"/>
           </Link>
 
           <div className="hidden lg:flex items-center gap-9">
