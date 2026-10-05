@@ -128,12 +128,7 @@ export default function IndustriesPage() {
               Contact Engineering
             </Link>
 
-            <Link
-              href="/contact"
-              className="inline-flex h-11 items-center justify-center border border-border px-6 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-            >
-              View Case Studies
-            </Link>
+            
           </div>
         </div>
       </section>

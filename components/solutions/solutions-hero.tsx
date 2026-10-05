@@ -10,7 +10,7 @@ export function SolutionsHero() {
             Enterprise Solutions
           </span>
 
-         <h1 className="font-display text-[32px] md:text-[38px] lg:text-[44px] font-semibold leading-[1.1] tracking-tight text-foreground">
+          <h1 className="font-display text-[32px] md:text-[38px] lg:text-[44px] font-semibold leading-[1.1] tracking-tight text-foreground">
             Powerful products for learning, operations, and people
           </h1>
 
@@ -19,32 +19,31 @@ export function SolutionsHero() {
             - and even more powerful together. Buy what you need, scale when
             you&apos;re ready.
           </p>
-
+{/** 
           <div className="mt-4 flex flex-wrap items-center gap-4">
-  <Button
-    asChild
-    variant="ghost"
-    size="lg"
-    className="inline-flex items-center justify-center gap-2 rounded-[3px] border border-foreground bg-foreground px-8 py-3 font-mono text-[14px] text-background shadow-[-5px_5px_0_0_#00D38D]"
-  >
-    <Link href="#lms">
-      Explore Solutions
-      <ArrowRight className="h-4 w-4" />
-    </Link>
-  </Button>
+            <Button
+              asChild
+              variant="ghost"
+              size="lg"
+              className="inline-flex items-center justify-center gap-2 rounded-[3px] border border-foreground bg-foreground px-8 py-3 font-mono text-[14px] text-background shadow-[-5px_5px_0_0_#00D38D]"
+            >
+              <Link href="#lms">
+                Explore Solutions
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
 
-  <Button
-    asChild
-    size="lg"
-    className="inline-flex items-center justify-center rounded-[3px] border border-foreground bg-background px-8 py-3 font-mono text-[14px] text-foreground shadow-[-5px_5px_0_0_#00D38D]"
-  >
-    <Link href="/contact">
-      Schedule Demo
-    </Link>
-  </Button>
-</div>
+            <Button
+              asChild
+              size="lg"
+              className="inline-flex items-center justify-center rounded-[3px] border border-foreground bg-background px-8 py-3 font-mono text-[14px] text-foreground shadow-[-5px_5px_0_0_#00D38D]"
+            >
+              <Link href="/contact">Schedule Demo</Link>
+            </Button>
+          </div>*/}
         </div>
       </div>
+      
     </section>
   );
 }
