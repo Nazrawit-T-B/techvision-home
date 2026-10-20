@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Archivo, JetBrains_Mono } from "next/font/google";
-import { Analytics } from "@Vercel/analytics/next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -55,7 +54,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>

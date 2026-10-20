@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev -p 3008",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start -p 3008",
     "lint": "eslint"
   },
   "dependencies": {
@@ -50,8 +50,7 @@
     "expo-asset": "latest",
     "expo-file-system": "latest",
     "expo-gl": "latest",
-    "framer-motion": "^13.4.2",
-    "framer-motion": "^13.4.3",
+    "framer-motion": "^13.5.1",
     "geist": "1.7.0",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
